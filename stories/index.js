@@ -10,7 +10,8 @@ import DayListItem from "components/DayListItem";
 import DayList from "components/DayList";
 import InterviewerListItem from "components/InterviewerListItem"
 import InterviewerList from "components/InterviewerList"
-import Appointment from "components/Appointments/index.js";
+import Appointment from "components/Appointments/index";
+import Header from "components/Appointments/Header"
 
 //---------------Button-----------------------
 storiesOf("Button", module)
@@ -150,3 +151,4 @@ storiesOf("InterviewerList", module)
   })
   .add("Appointment", () => <Appointment />)
   .add("Appointment with Time", () => <Appointment time="12pm" /> )
+  .add("Header", () => <Header time="12pm" />)
