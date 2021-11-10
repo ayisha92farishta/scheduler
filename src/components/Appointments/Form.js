@@ -1,7 +1,7 @@
 import React from "react";
 
-import InterviewerList from "components/InterviewerList";
-import Button from "components/Button";
+import InterviewerList from "../InterviewerList";
+import Button from "../Button";
 
 export default function Form () {
   return(
@@ -25,8 +25,8 @@ export default function Form () {
       </section>
       <section className="appointment__card-right">
         <section className="appointment__actions">
-          <Button danger {/* your code goes here */}>Cancel</Button>
-          <Button confirm {/* your code goes here */}>Save</Button>
+          <Button danger /*{ your code goes here } */>Cancel</Button>
+          <Button confirm/* { your code goes here }*/>Save</Button>
         </section>
       </section>
     </main>
