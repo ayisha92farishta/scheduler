@@ -8,7 +8,7 @@ export default function InterviewerList (props) {
    <section className="interviewers">
      <h4 className="interviewers__header">Interviewer</h4>  
      <ul className="interviewers__list"> 
-    { props.interviewers.map(value => {
+    {props.interviewers.map(value => {
           return (
               <InterviewerListItem
                 key={value.id}
