@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Show () {
+export default function Show (props) {
   return (
     <main className="appointment__card appointment__card--show">
       <section className="appointment__card-left">
@@ -16,6 +16,7 @@ export default function Show () {
             className="appointment__actions-button"
             src="images/edit.png"
             alt="Edit"
+            onClick={props.onEdit}
           />
           <img
             className="appointment__actions-button"
