@@ -136,7 +136,7 @@ storiesOf("InterviewerList", module)
   .add("Selected", () => (
     <InterviewerList
       interviewers={interviewers}
-      interviewer={3}
+      value={3}
     />
   ))
   .add("Clickable", () => (
@@ -180,6 +180,7 @@ storiesOf("InterviewerList", module)
       interviewers={interviewers}
       onSave={action("onSave")}
       onCancel={action("onCancel")}
+      
     />))
   .add("Create", () => (
     <Form 
