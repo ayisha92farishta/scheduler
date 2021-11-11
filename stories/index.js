@@ -175,9 +175,15 @@ storiesOf("InterviewerList", module)
   .add("Error", () => <Error message="Could not delete appointment" onClose={action("onClose")} />)
   .add("Edit", () => (
     <Form 
-      student="string"
+      student="Ayisha Farishta Ashraf"
       interviewer={2}
-      interviewers={["abd"]}
+      interviewers={[]}
+      onSave={action("onSave")}
+      onCancel={action("onCancel")}
+    />))
+  .add("Create", () => (
+    <Form 
+      interviewers={[]}
       onSave={action("onSave")}
       onCancel={action("onCancel")}
     />))
