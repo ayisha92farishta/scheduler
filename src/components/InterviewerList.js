@@ -4,6 +4,8 @@ import "./InterviewerList.scss"
 import classNames from "classnames";
 
 export default function InterviewerList (props) {
+  console.log(props)
+  console.log(props.interviewers)
   return (
    <section className="interviewers">
      <h4 className="interviewers__header">Interviewer</h4>  
