@@ -9,10 +9,10 @@ export default function Form (props) {
 
   const [student, setStudent] = useState(props.student || "");
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
-  //console.log("Interviewer-========", interviewer)
- 
+  
   const reset = function () {
-    return setStudent(""), setInterviewer(null);
+    setStudent("");
+    setInterviewer(null);
   }
 
   const cancel =  function (){
@@ -31,7 +31,7 @@ export default function Form (props) {
           type="text"
           //controlled component
           value={student}
-          onChange={(event) => setStudent(event.target.student)}
+          onChange={(event) => setStudent(event.target.value)}
           placeholder="Enter Student Name"
         />
       </form>
