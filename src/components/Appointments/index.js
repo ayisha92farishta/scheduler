@@ -7,8 +7,8 @@ import Show from "./Show";
 export default function Appointment(props){
   return (
     <article className="appointment">
-     {props.time } 
-     {props.interview ? <Show /> : <Empty />}
+     {props.time ?  props.time : "No Appointments"} 
+     {props.interview ? <Show student={props.student} interviewer={props.interviewer} /> : <Empty />}
     </article>
   )
 }
