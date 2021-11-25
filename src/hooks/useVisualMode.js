@@ -8,19 +8,21 @@ export default function useVisualMode(initial){
   //transition function
   function transition(newMode) {
     setMode(newMode)
-    
-    setHistory([...prev, newMode])     
+    //add new mode to the history array
+    setHistory(()=> {
+     history.push(newMode);
+     return history
+    });
   }
-  
   //Back function
-  function back(currentMode) {
+  function back() {
 
-    const newArr = history.find((mode) => mode === currentMode);
+    history.pop();
 
-    setHistory(newArr)
-
-    setMode(history)
+    if (history.length < 1) return;
+        
+    setMode(history[history.length-1])
   }
 
   return {mode, transition,back }
-}
+};
