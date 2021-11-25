@@ -16,11 +16,11 @@ export default function useVisualMode(initial){
   }
   //Back function
   function back() {
-
+    //removes last mode from the history array
     history.pop();
-
+    //checks if the array is empty
     if (history.length < 1) return;
-        
+    //if not, sets the mode to the previous mode from the history array
     setMode(history[history.length-1])
   }
 
