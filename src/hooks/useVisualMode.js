@@ -10,6 +10,7 @@ export default function useVisualMode(initial){
     setMode(newMode)
     //add new mode to the history array
     setHistory(()=> {
+
      history.push(newMode);
      return history
     });
