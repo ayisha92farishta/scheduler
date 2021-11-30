@@ -3,6 +3,7 @@ import './styles.scss'
 import Header from "./Header";
 import Empty from "./Empty";
 import Show from "./Show";
+import Form from "./Form";
 import useVisualMode from "hooks/useVisualMode";
 
 export default function Appointment(props){
@@ -22,7 +23,14 @@ export default function Appointment(props){
         interviewer={props.interview.interviewer}
        />
       )}
-      {mode === CREATE && }
+      {mode === CREATE && (
+        <Form 
+        student={props.student}
+        interviewer={props.interviewer}
+        interviewers = {[]}
+        onCancel={back}
+        />
+      )}
       
 
      {/* {props.time ?  props.time : "No Appointments"} 
