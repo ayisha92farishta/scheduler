@@ -48,6 +48,11 @@ export default function Application(props) {
   
   const appointments = getAppointmentsForDay(state, state.day)
 
+   //bookInterview function
+
+   function bookInterview(id, interview) {
+    console.log(id, interview);
+  }
   
   const schedule = appointments.map((appointment) => {
  
@@ -68,12 +73,7 @@ export default function Application(props) {
   })
 
 
-  //bookInterview function
-
-  function bookInterview(id, interview) {
-    console.log(id, interview);
-  }
-
+ 
   return (
     <main className="layout">
       <section className="sidebar">
