@@ -51,7 +51,22 @@ export default function Application(props) {
    //bookInterview function
 
    function bookInterview(id, interview) {
+    //checking if the id and interview are correct
     console.log("id and interview", id, interview);
+    //creating new appointment object
+    const appointment = {
+      ...state.appointments[id],
+      interview: { ...interview }
+    };
+    //updating new appointment's' object
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment
+    };
+   setState({
+     ...state,
+     appointments
+    })
   }
   
   const schedule = appointments.map((appointment) => {
