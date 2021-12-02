@@ -21,6 +21,7 @@ export default function Appointment(props){
       student: name,
       interviewer
     };
+    props.bookInterview(props.id,interview)
   }
 
   return (
@@ -39,9 +40,7 @@ export default function Appointment(props){
         interviewer={props.interviewer}
         interviewers = {props.interviewers}
         onCancel={back}
-        onSave={save(props.name, props.interviewer)}
-        //new object
-        interview={props.bookInterview}
+        onSave={save}        
         />
       )}
       
