@@ -6,7 +6,7 @@ import Show from "./Show";
 import Form from "./Form";
 import Status from "./Status";
 import useVisualMode from "hooks/useVisualMode";
-import Status from "./Status";
+
 
 
 export default function Appointment(props){
@@ -24,8 +24,8 @@ export default function Appointment(props){
       student: name,
       interviewer
     };
-    
-    
+    //showing the saving indicator
+    transition(SAVING)
 
     props.bookInterview(props.id,interview)
       .then(() => {
