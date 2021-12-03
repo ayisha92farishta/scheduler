@@ -27,6 +27,7 @@ export default function Appointment(props){
   )
  //add save function
   function save(name, interviewer) {
+    //condition to enter name or interviewer
     if(!name || !interviewer) {
       console.log("Name and interviewer required");
       return
@@ -41,20 +42,16 @@ export default function Appointment(props){
     props.bookInterview(props.id,interview)
     //transition to SHOW
       .then(() => transition(SHOW))
-      .catch(error => transition(ERROR_SAVE))
+      .catch(error => transition(ERROR_SAVE, true))
         
   }
   
   //add delete function
    function deleteInterview (){
-    transition(DELETING)
+    transition(DELETING, true)
     props.cancelInterview(props.id)
-    .then(() => {
-      transition(EMPTY)
-    }).catch((error) => {console.log("Error while deleting", error)
-    transition(ERROR_DELETE)
-  })
-   
+    .then(() => transition(EMPTY))
+    .catch((error) => transition(ERROR_DELETE, true))   
    }
 
 
