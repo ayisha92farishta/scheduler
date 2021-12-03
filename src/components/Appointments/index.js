@@ -7,6 +7,7 @@ import Form from "./Form";
 import Status from "./Status";
 import Confirm from "./Confirm";
 import useVisualMode from "hooks/useVisualMode";
+import Error from "./Error";
 
 
 
@@ -81,8 +82,6 @@ export default function Appointment(props){
        <Status message="Saving"/>
        )}
 
-       {console.log("Mode------", props.interview)}
-
        {mode === EDIT && (
           <Form 
           student={props.interview.student}
@@ -104,6 +103,8 @@ export default function Appointment(props){
          onCancel={back}
          />
        )}
+       {mode === ERROR_DELETE && <Error message="Could not Delete the appointment" onClose={back}/>}
+      {mode === ERROR_SAVE && <Error message="Could not add the appointment" onClose={back}/>}
        
 
 
