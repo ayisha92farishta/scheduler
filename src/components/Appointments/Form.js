@@ -14,11 +14,12 @@ export default function Form (props) {
   const reset = function () {
     setStudent("");
     setInterviewer(null);
+
   }
 
   const cancel =  function (){
      reset();
-     props.onCancel(student, interviewer)     
+     props.onCancel(student, interviewer)    
   }
 
   //function to not submit if no name is entered
@@ -28,8 +29,14 @@ export default function Form (props) {
       setError("Student name cannot be blank");
       return;
     }
-  
-    props.onSave(student, interviewer);
+
+    // if (interviewer === null){
+    //   setError("Please choose an interviewer");
+    //   return;
+    // }
+
+    setError("")
+    props.onSave(student, interviewer);    
   }
 
   return(
