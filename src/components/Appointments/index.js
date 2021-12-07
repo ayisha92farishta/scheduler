@@ -28,12 +28,7 @@ export default function Appointment(props){
   )
  //add save function
   function save(name, interviewer) {
-    //condition to enter name or interviewer
-    // if(!name || !interviewer) {
-    //   console.log("Name and interviewer required");
-    //   return
-    // }
-    
+       
     const interview = {
       student: name,
       interviewer
